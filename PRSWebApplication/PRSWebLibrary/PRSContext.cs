@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PRSWebLibrary.Models;
-using System;
 
 namespace PRSWebLibrary
 {
@@ -8,6 +7,7 @@ namespace PRSWebLibrary
     {
         public PRSContext(DbContextOptions options) : base(options) { }
         public DbSet<User> Users { get; set; }
+        public DbSet<Vendor> Vendors { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
