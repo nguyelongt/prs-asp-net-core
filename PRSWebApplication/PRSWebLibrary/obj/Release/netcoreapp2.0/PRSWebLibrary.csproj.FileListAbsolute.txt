@@ -1,0 +1,9 @@
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\bin\Release\netcoreapp2.0\PRSWebLibrary.deps.json
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\bin\Release\netcoreapp2.0\PRSWebLibrary.dll
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\bin\Release\netcoreapp2.0\PRSWebLibrary.pdb
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Release\netcoreapp2.0\PRSWebLibrary.csprojResolveAssemblyReference.cache
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Release\netcoreapp2.0\PRSWebLibrary.csproj.CoreCompileInputs.cache
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Release\netcoreapp2.0\PRSWebLibrary.AssemblyInfoInputs.cache
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Release\netcoreapp2.0\PRSWebLibrary.AssemblyInfo.cs
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Release\netcoreapp2.0\PRSWebLibrary.dll
+Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Release\netcoreapp2.0\PRSWebLibrary.pdb

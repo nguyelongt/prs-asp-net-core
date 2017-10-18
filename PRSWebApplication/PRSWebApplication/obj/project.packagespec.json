@@ -1,0 +1,64 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebApplication/PRSWebApplication.csproj",
+    "projectName": "PRSWebApplication",
+    "projectPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebApplication/PRSWebApplication.csproj",
+    "outputPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebApplication/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp2.0"
+    ],
+    "frameworks": {
+      "netcoreapp2.0": {
+        "projectReferences": {
+          "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebLibrary/PRSWebLibrary.csproj": {
+            "projectPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebLibrary/PRSWebLibrary.csproj"
+          }
+        }
+      }
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "target": "Package",
+          "version": "2.0.0"
+        },
+        "Microsoft.AspNetCore.All": {
+          "target": "Package",
+          "version": "2.0.0"
+        },
+        "Microsoft.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "2.0.0"
+        },
+        "Microsoft.EntityFrameworkCore.SqlServer": {
+          "target": "Package",
+          "version": "2.0.0"
+        },
+        "Microsoft.EntityFrameworkCore.Tools": {
+          "target": "Package",
+          "version": "2.0.0"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  },
+  "runtimes": {
+    "win": {
+      "#import": []
+    },
+    "win-x64": {
+      "#import": []
+    },
+    "win-x86": {
+      "#import": []
+    }
+  }
+}
