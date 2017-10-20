@@ -24,4 +24,3 @@ Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLi
 Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Debug\netcoreapp2.0\PRSWebLibrary.AssemblyInfo.cs
 Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Debug\netcoreapp2.0\PRSWebLibrary.dll
 Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Debug\netcoreapp2.0\PRSWebLibrary.pdb
-Z:\Users\longnguyen\Desktop\Visual Studio 2017\PRSWeb\PRSWebApplication\PRSWebLibrary\obj\Debug\netcoreapp2.0\PRSWebLibrary.csprojResolveAssemblyReference.cache

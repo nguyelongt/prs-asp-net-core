@@ -11,7 +11,7 @@ using System;
 namespace PRSWebLibrary.Migrations
 {
     [DbContext(typeof(PRSContext))]
-    [Migration("20171017055314_Initial Migration")]
+    [Migration("20171020051847_Initial Migration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,6 +60,62 @@ namespace PRSWebLibrary.Migrations
                         .IsUnique();
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("PRSWebLibrary.Models.Vendor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10);
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateUpdated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValueSql("1");
+
+                    b.Property<bool>("IsPreApproved");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(12);
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasMaxLength(2);
+
+                    b.Property<int>("UpdatedByUser");
+
+                    b.Property<string>("Zip")
+                        .IsRequired()
+                        .HasMaxLength(5);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vendors");
                 });
 #pragma warning restore 612, 618
         }

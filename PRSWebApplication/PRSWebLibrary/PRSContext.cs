@@ -14,6 +14,16 @@ namespace PRSWebLibrary
             modelBuilder.Entity<User>()
                 .HasIndex(b => b.UserName)
                 .IsUnique();
+
+            modelBuilder.Entity<Vendor>()
+                .Property(b => b.IsActive)
+                .HasDefaultValueSql("1");
+            modelBuilder.Entity<Vendor>()
+                .Property(b => b.DateCreated)
+                .HasColumnType("datetime2");
+            modelBuilder.Entity<Vendor>()
+                .Property(b => b.DateUpdated)
+                .HasColumnType("datetime2");
         }
     }
 }

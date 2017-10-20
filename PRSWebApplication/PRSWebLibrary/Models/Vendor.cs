@@ -5,6 +5,7 @@ namespace PRSWebLibrary.Models
 {
     public class Vendor
     {
+        [Key]
         public int Id { get; set; }
 
         [StringLength(10)]
