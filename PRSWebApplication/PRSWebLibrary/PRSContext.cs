@@ -19,11 +19,11 @@ namespace PRSWebLibrary
                 .Property(b => b.IsActive)
                 .HasDefaultValueSql("1");
             modelBuilder.Entity<Vendor>()
-                .Property(b => b.DateCreated)
-                .HasColumnType("datetime2");
+            .Property(b => b.DateCreated)
+            .HasDefaultValueSql("getdate()");
             modelBuilder.Entity<Vendor>()
-                .Property(b => b.DateUpdated)
-                .HasColumnType("datetime2");
+            .Property(b => b.DateUpdated)
+            .HasDefaultValueSql("getdate()");
         }
     }
 }

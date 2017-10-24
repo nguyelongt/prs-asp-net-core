@@ -11,7 +11,7 @@ using System;
 namespace PRSWebLibrary.Migrations
 {
     [DbContext(typeof(PRSContext))]
-    [Migration("20171020051847_Initial Migration")]
+    [Migration("20171024014836_Initial Migration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,11 +79,13 @@ namespace PRSWebLibrary.Migrations
                         .IsRequired()
                         .HasMaxLength(10);
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("DateCreated")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasDefaultValueSql("getdate()");
 
-                    b.Property<DateTime>("DateUpdated")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("DateUpdated")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -106,8 +108,6 @@ namespace PRSWebLibrary.Migrations
                     b.Property<string>("State")
                         .IsRequired()
                         .HasMaxLength(2);
-
-                    b.Property<int>("UpdatedByUser");
 
                     b.Property<string>("Zip")
                         .IsRequired()

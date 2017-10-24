@@ -1,10 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PRSWebLibrary.Models
 {
     public class Vendor
     {
+  
+
         [Key]
         public int Id { get; set; }
 
@@ -45,16 +48,12 @@ namespace PRSWebLibrary.Models
         [Required]
         public bool IsPreApproved { get; set; }
 
-        [Required]
         public bool IsActive { get; set; }
 
-        [Required]
-        public DateTime DateCreated { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public DateTime? DateCreated { get; set; }
 
-        [Required]
-        public DateTime DateUpdated { get; set; }
-
-        [Required]
-        public int UpdatedByUser { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public DateTime? DateUpdated { get; set; }
     }
 }

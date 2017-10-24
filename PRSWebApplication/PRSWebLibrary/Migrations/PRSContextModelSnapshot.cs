@@ -78,11 +78,13 @@ namespace PRSWebLibrary.Migrations
                         .IsRequired()
                         .HasMaxLength(10);
 
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("DateCreated")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasDefaultValueSql("getdate()");
 
-                    b.Property<DateTime>("DateUpdated")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("DateUpdated")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -105,8 +107,6 @@ namespace PRSWebLibrary.Migrations
                     b.Property<string>("State")
                         .IsRequired()
                         .HasMaxLength(2);
-
-                    b.Property<int>("UpdatedByUser");
 
                     b.Property<string>("Zip")
                         .IsRequired()
