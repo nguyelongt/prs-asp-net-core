@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PRSWebLibrary.Models.Vendor>
+@{ 
+    ViewData["Title"] = "Vendors";
+}
+
+<h2>Vendors List</h2>
+
+<table class="ui selectable celled table">
+    @if (Model.Any())
+    {
+        <thead>
+            <tr>
+                <th>Vendors Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Phone</th>
+                <th>Pre-Approved</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.Name</th>
+                    <th>@item.Address</th>
+                    <th>@item.City</th>
+                    <th>@item.State</th>
+                    <th>@item.Zip</th>
+                    <th>@item.Phone</th>
+                    <th>@item.IsPreApproved</th>
+                </tr>
+            }
+        </thead>
+    }  
+</table>

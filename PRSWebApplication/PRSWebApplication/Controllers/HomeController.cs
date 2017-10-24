@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PRSWebApplication.Models;
 using Microsoft.AspNetCore.Http;
@@ -21,6 +18,14 @@ namespace PRSWebApplication.Controllers
         public IActionResult Index()
         {
             return View(_context.Users.ToList());
+        }
+
+        // Ended
+
+        // Vendor
+        public IActionResult Vendors()
+        {
+            return View(_context.Vendors.ToList());
         }
 
         // Ended
