@@ -31,6 +31,9 @@ namespace PRSWebLibrary
             .HasDefaultValueSql("getdate()");
             // Product
             modelBuilder.Entity<Product>()
+                .Property(b => b.IsActive)
+                .HasDefaultValueSql("1");
+            modelBuilder.Entity<Product>()
                 .Property(b => b.UpdatedByUser)
                 .HasDefaultValueSql("1");
             modelBuilder.Entity<Product>()

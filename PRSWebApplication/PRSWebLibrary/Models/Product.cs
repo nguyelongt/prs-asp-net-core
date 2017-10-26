@@ -24,10 +24,13 @@ namespace PRSWebLibrary.Models
         public decimal? Price { get; set; }
         
         [StringLength(255)]
-        [Required]
+        [Required(AllowEmptyStrings = true)]
+        [DisplayFormat(ConvertEmptyStringToNull = true)]
         public string Unit { get; set; }
 
         [StringLength(255)]
+        [Required(AllowEmptyStrings = true)]
+        [DisplayFormat(ConvertEmptyStringToNull = true)]
         public string PhotoPath { get; set; }
 
         public bool IsActive { get; set; }
