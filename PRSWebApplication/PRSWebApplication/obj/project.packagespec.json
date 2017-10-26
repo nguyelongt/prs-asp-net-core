@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebApplication/PRSWebApplication.csproj",
+    "projectUniqueName": "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebApplication\\PRSWebApplication.csproj",
     "projectName": "PRSWebApplication",
-    "projectPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebApplication/PRSWebApplication.csproj",
-    "outputPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebApplication/obj/",
+    "projectPath": "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebApplication\\PRSWebApplication.csproj",
+    "outputPath": "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebApplication\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp2.0"
@@ -12,8 +12,8 @@
     "frameworks": {
       "netcoreapp2.0": {
         "projectReferences": {
-          "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebLibrary/PRSWebLibrary.csproj": {
-            "projectPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebLibrary/PRSWebLibrary.csproj"
+          "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebLibrary\\PRSWebLibrary.csproj": {
+            "projectPath": "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebLibrary\\PRSWebLibrary.csproj"
           }
         }
       }
@@ -48,17 +48,6 @@
       ],
       "assetTargetFallback": true,
       "warn": true
-    }
-  },
-  "runtimes": {
-    "win": {
-      "#import": []
-    },
-    "win-x64": {
-      "#import": []
-    },
-    "win-x86": {
-      "#import": []
     }
   }
 }

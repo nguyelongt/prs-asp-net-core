@@ -6,8 +6,6 @@ namespace PRSWebLibrary.Models
 {
     public class Vendor
     {
-  
-
         [Key]
         public int Id { get; set; }
 
@@ -46,14 +44,16 @@ namespace PRSWebLibrary.Models
         public string Email { get; set; }
 
         [Required]
-        public bool IsPreApproved { get; set; }
+        public bool? IsPreApproved { get; set; }
 
-        public bool IsActive { get; set; }
+        public bool? IsActive { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateCreated { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateUpdated { get; set; }
+        
+        
     }
 }

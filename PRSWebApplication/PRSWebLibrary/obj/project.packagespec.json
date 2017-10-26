@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebLibrary/PRSWebLibrary.csproj",
+    "projectUniqueName": "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebLibrary\\PRSWebLibrary.csproj",
     "projectName": "PRSWebLibrary",
-    "projectPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebLibrary/PRSWebLibrary.csproj",
-    "outputPath": "/Users/longnguyen/Desktop/Visual Studio 2017/PRSWeb/PRSWebApplication/PRSWebLibrary/obj/",
+    "projectPath": "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebLibrary\\PRSWebLibrary.csproj",
+    "outputPath": "Z:\\Users\\longnguyen\\Desktop\\Visual Studio 2017\\PRSWeb\\PRSWebApplication\\PRSWebLibrary\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp2.0"
