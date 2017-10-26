@@ -26,7 +26,10 @@ namespace PRSWebLibrary.Models
         [StringLength(255)]
         [Required]
         public string Unit { get; set; }
-        
+
+        [StringLength(255)]
+        public string PhotoPath { get; set; }
+
         public bool IsActive { get; set; }
         
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]

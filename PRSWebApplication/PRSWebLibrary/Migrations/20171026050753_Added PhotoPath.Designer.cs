@@ -11,9 +11,10 @@ using System;
 namespace PRSWebLibrary.Migrations
 {
     [DbContext(typeof(PRSContext))]
-    partial class PRSContextModelSnapshot : ModelSnapshot
+    [Migration("20171026050753_Added PhotoPath")]
+    partial class AddedPhotoPath
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
