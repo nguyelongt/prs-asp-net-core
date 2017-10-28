@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PRSWebLibrary.Models.Product>
+@{ 
+    ViewData["Title"] = "Products";
+}
+
+<h2>Products List</h2>
+
+<table class="ui selectable celled table">
+        @if (Model.Any())
+        {
+            <thead>
+                <tr>
+                    <th>Part Number</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Unit</th>
+                    <th>Photo Path</th>
+                </tr>
+            </thead>
+                foreach (var item in Model)
+                {
+                <tbody>
+                    <tr>
+                        <th>@item.PartNumber</th>
+                        <th>@item.Name</th>
+                        <th>@item.Price</th>
+                        <th>@item.Unit</th>
+                        <th>@item.PhotoPath</th>
+                    </tr>
+                 </tbody>  
+                 }
+         }
+</table>
