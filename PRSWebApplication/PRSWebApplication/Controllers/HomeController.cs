@@ -30,6 +30,14 @@ namespace PRSWebApplication.Controllers
 
         // Ended
 
+        // Product
+        public IActionResult Products()
+        {
+            return View(_context.Products.ToList());
+        }
+
+        // Ended
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
