@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Net.Http.Headers;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PRSWebLibrary.Models;
 
 namespace PRSWebLibrary
@@ -12,6 +9,8 @@ namespace PRSWebLibrary
         public DbSet<User> Users { get; set; }
         public DbSet<Vendor> Vendors { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<PurchaseRequest> PurchaseRequests { get; set; }
+        public DbSet<PurchaseRequestLineItem> PurchaseRequestLineItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
