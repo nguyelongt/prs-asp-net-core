@@ -9,6 +9,7 @@ namespace PRSWebLibrary
         public DbSet<User> Users { get; set; }
         public DbSet<Vendor> Vendors { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Status> Statuses { get; set; }
         public DbSet<PurchaseRequest> PurchaseRequests { get; set; }
         public DbSet<PurchaseRequestLineItem> PurchaseRequestLineItems { get; set; }
 
@@ -43,6 +44,13 @@ namespace PRSWebLibrary
                 .HasDefaultValueSql("getdate()");
             modelBuilder.Entity<Product>()
                 .Property(b => b.DateUpdated)
+                .HasDefaultValueSql("getdate()");
+            // Purchase Request
+            modelBuilder.Entity<PurchaseRequest>()
+                .Property(p => p.Total)
+                .HasColumnType($"decimal(10,2)");
+            modelBuilder.Entity<PurchaseRequest>()
+                .Property(b => b.SubmittedDate)
                 .HasDefaultValueSql("getdate()");
         }
      
