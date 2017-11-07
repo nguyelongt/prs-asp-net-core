@@ -28,15 +28,27 @@ namespace PRSWebLibrary.Models
 
         [StringLength(15)]
         [Required]
-        public string Status { get; set; }
+        public string Status { get; set; } = "New";
 
         [Required]
-        public decimal? Total { get; set; }
+        public decimal? Total { get; set; } = 0;
 
         [Required]
         public DateTime SubmittedDate { get; set; }
 
         public int UserId { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
+
+        public void Clone(PurchaseRequest purchaseRequest)
+        {
+            UserId = purchaseRequest.UserId;
+            Description = purchaseRequest.Description;
+            Justification = purchaseRequest.Justification;
+            DateNeeded = purchaseRequest.DateNeeded;
+            DeliveryMode = purchaseRequest.DeliveryMode;
+            Status = purchaseRequest.Status;
+            Total = purchaseRequest.Total;
+            SubmittedDate = purchaseRequest.SubmittedDate;
+        }
     }
 }
