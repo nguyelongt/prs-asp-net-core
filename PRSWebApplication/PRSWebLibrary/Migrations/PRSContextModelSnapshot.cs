@@ -68,6 +68,80 @@ namespace PRSWebLibrary.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("PRSWebLibrary.Models.PurchaseRequest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("DateNeeded");
+
+                    b.Property<string>("DeliveryMode")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Justification")
+                        .HasMaxLength(80);
+
+                    b.Property<string>("RejectionReason")
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(15);
+
+                    b.Property<DateTime>("SubmittedDate")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValueSql("getdate()");
+
+                    b.Property<decimal?>("Total")
+                        .IsRequired()
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PurchaseRequests");
+                });
+
+            modelBuilder.Entity("PRSWebLibrary.Models.PurchaseRequestLineItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("PurchaseRequestId");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("PurchaseRequestId");
+
+                    b.ToTable("PurchaseRequestLineItems");
+                });
+
+            modelBuilder.Entity("PRSWebLibrary.Models.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Statuses");
+                });
+
             modelBuilder.Entity("PRSWebLibrary.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -164,6 +238,27 @@ namespace PRSWebLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Vendors");
+                });
+
+            modelBuilder.Entity("PRSWebLibrary.Models.PurchaseRequest", b =>
+                {
+                    b.HasOne("PRSWebLibrary.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("PRSWebLibrary.Models.PurchaseRequestLineItem", b =>
+                {
+                    b.HasOne("PRSWebLibrary.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("PRSWebLibrary.Models.PurchaseRequest", "PurchaseRequest")
+                        .WithMany()
+                        .HasForeignKey("PurchaseRequestId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

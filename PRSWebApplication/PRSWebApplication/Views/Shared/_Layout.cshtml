@@ -43,17 +43,18 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     @if (Context.Session.GetString("UserID") != null)
                     {
+                        <li><a asp-area="" asp-controller="PurchaseRequestLineItems" asp-action="Index">Order Entry</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Vendors">Vendors</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Products">Products</a></li>
                     }
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                     @if (Context.Session.GetString("UserID") != null)
                     {
                         <li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>
                     }
                     else
                     {
+                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Register">Register</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Login">Login</a></li>
                     }

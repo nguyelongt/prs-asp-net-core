@@ -22,6 +22,14 @@ namespace PRSWebApplication.Controllers
 
         // Ended
 
+        // Purchase Reuqest
+        //public IActionResult PurchaseRequests()
+        //{
+            //return View();
+        //}
+
+        // Ended
+
         // Vendor
         public IActionResult Vendors()
         {
@@ -85,10 +93,9 @@ namespace PRSWebApplication.Controllers
         [HttpPost]
         public ActionResult Login(PRSWebLibrary.Models.User user)
         {
-            var account = _context.Users.Where(u =>
-            u.UserName == user.UserName
-            && u.Password == user.Password)
-            .FirstOrDefault();
+            var account = _context.Users
+            .FirstOrDefault(u => u.UserName == user.UserName
+            && u.Password == user.Password);
 
             if (account != null)
             {

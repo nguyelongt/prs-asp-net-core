@@ -19,6 +19,7 @@ namespace PRSWebLibrary.Models
         public string RejectionReason { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         public DateTime DateNeeded { get; set; }
 
         [StringLength(20)]
